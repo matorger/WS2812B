@@ -6,7 +6,6 @@
  */
 
 #include "WS2812B.h"
-#include "Delay.h"
 
 void WritePixal(PIXAL *pixal)
 {
