@@ -1,0 +1,98 @@
+#include "WS2812B.h"
+
+PIXAL pixal;
+pixal.GREEN = 3;
+pixal.RED = 252;
+pixal.BLUE = 3;
+
+WritePixal(&pixal);
+
+
+
+ while (1)
+  {
+	  for(int loop = 3; loop < 252; loop++)
+	  {
+		  pixal.GREEN = loop;
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  HAL_Delay(5);
+	  }
+	  for(int loop = 252; loop > 3; loop--)
+	  {
+		  pixal.RED = loop;
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  HAL_Delay(5);
+	  }
+	  for(int loop = 3; loop < 255; loop++)
+	  {
+		  pixal.BLUE = loop;
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  HAL_Delay(5);
+	  }
+	  for(int loop = 252; loop > 3; loop--)
+	  {
+		  pixal.GREEN = loop;
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  WritePixal(&pixal);
+		  HAL_Delay(5);
+	  }
+	for(int loop = 3; loop < 255; loop++)
+	{
+		pixal.RED = loop;
+		WritePixal(&pixal);
+		WritePixal(&pixal);
+		WritePixal(&pixal);
+		WritePixal(&pixal);
+		WritePixal(&pixal);
+		WritePixal(&pixal);
+		WritePixal(&pixal);
+		WritePixal(&pixal);
+		WritePixal(&pixal);
+		HAL_Delay(5);
+	}
+	for(int loop = 255; loop > 3; loop--)
+	{
+	  pixal.BLUE = loop;
+	  WritePixal(&pixal);
+	  WritePixal(&pixal);
+	  WritePixal(&pixal);
+	  WritePixal(&pixal);
+	  WritePixal(&pixal);
+	  WritePixal(&pixal);
+	  WritePixal(&pixal);
+	  WritePixal(&pixal);
+	  WritePixal(&pixal);
+	  HAL_Delay(5);
+	}
+}
